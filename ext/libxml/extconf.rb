@@ -2,7 +2,7 @@
 
 require 'mkmf'
 require 'rubygems'
-gem 'mini_portile2', '~> 2.5.0' # Keep this version in sync with the one in the gemspec!
+gem 'mini_portile2', '>= 2.4.0' # Keep this version in sync with the one in the gemspec!
 require 'mini_portile2'
 message "Using mini_portile2 version #{MiniPortile::VERSION}\n"
 
@@ -55,6 +55,8 @@ unless File.exist?(checkpoint)
   FileUtils.touch checkpoint
 end
 libxml2_recipe.activate
+# .activate is supposed to do this, but it doesn't before mini_portile2-2.5.0, can be removed once we update.
+$LIBPATH = ["#{libxml2_recipe.path}/lib"] | $LIBPATH
 append_cflags("-I#{File.join(libxml2_recipe.path, 'include', 'libxml2')}")
 
 have_header('libxml/parser.h') || crash('parser.h not found')
