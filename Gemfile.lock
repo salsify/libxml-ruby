@@ -1,0 +1,29 @@
+PATH
+  remote: .
+  specs:
+    salsify_libxml_ruby (3.2.3)
+      mini_portile2 (~> 2.8.0)
+
+GEM
+  remote: https://gems.salsify.com/
+  specs:
+    mini_portile2 (2.8.0)
+    minitest (5.16.3)
+    rake (13.0.6)
+    rake-compiler (1.2.0)
+      rake
+    salsify_gem (0.4.1)
+      thor
+    thor (1.2.1)
+
+PLATFORMS
+  x86_64-darwin-21
+
+DEPENDENCIES
+  minitest
+  rake-compiler
+  salsify_gem
+  salsify_libxml_ruby!
+
+BUNDLED WITH
+   2.3.4
