@@ -14,6 +14,14 @@ module LibXML
       def elements
         type.elements
       end
+
+      def min_occurs
+        @min
+      end
+
+      def max_occurs
+        @max
+      end
     end
   end
 end
