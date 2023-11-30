@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 require "bundler/gem_tasks"
-require "salsify_gem"
 require "rubygems"
 require "rake/extensiontask"
 require "rake/testtask"
