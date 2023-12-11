@@ -3,3 +3,6 @@
 # This include is deprecated, use libxml-ruby instead!
 
 require 'libxml-ruby'
+
+module Libxml
+end
